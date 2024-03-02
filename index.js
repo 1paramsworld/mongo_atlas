@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.port || 3000; 
 const url = process.env.MONGODB_URL;
 
-app.get("/", (req, res) => {
+app.get("/insert", (req, res) => {
     if (!url) {
         console.error("MongoDB URL not found in environment variables.");
         res.status(500).send("MongoDB URL not found.");
